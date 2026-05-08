@@ -4,49 +4,75 @@
   <meta charset="UTF-8">
   <title>Asistente UEMC</title>
 
-  <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
-
   <style>
     body {
       margin: 0;
+      background: #f4f6f9;
       font-family: Segoe UI, Arial;
-      background: #f5f5f5;
-    }
-    #webchat {
-      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      height: 700px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      background: #003865;
+      color: white;
+      padding: 14px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .chat-wrapper {
+      position: relative;
+      flex: 1;
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Oculta parcialmente la cabecera estándar del webchat */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+      background: white;
+      z-index: 10;
     }
   </style>
 </head>
+
 <body>
 
-<div id="webchat"></div>
+<div class="container">
+  <div class="header">
+    Asistente de solicitudes UEMC
+  </div>
 
-<script>
-  const directLine = window.WebChat.createDirectLine({
-    token: "https://defaultdf8b4aa68ab34a84a045f6a962ff2e.d3.environment.api.powerplatform.com/copilotstudio/dataverse-backed/authenticated/bots/cra1b_AsistenteTramitacinSolicitudesUEMC/conversations?api-version=2022-03-01-preview"
-  });
+  <div class="chat-wrapper">
+    <div class="overlay"></div>
 
-  window.WebChat.renderWebChat({
-    directLine: directLine,
-    styleOptions: {
-      botAvatarInitials: "UEMC",
-      userAvatarInitials: "Tú",
-      bubbleBackground: "#ffffff",
-      bubbleFromUserBackground: "#e6f2ff",
-      bubbleBorderRadius: 8,
-      accent: "#0078D4",
-      primaryFont: "Segoe UI",
-      hideUploadButton: true
-    }
-  }, document.getElementById('webchat'));
-
-  directLine.postActivity({
-    from: { id: 'user' },
-    type: 'message',
-    text: 'hola'
-  }).subscribe();
-</script>
+    <iframe src="<!DOCTYPE html><html><body><iframe src="https://copilotstudio.microsoft.com/environments/Default-df8b4aa6-8ab3-4a84-a045-f6a962ff2ed3/bots/cra1b_AsistenteTramitacinSolicitudesUEMC/webchat?__version__=2" frameborder="0" style="width: 100%; height: 100%;"></iframe></body></html>"></iframe>
+  </div>
+</div>
 
 </body>
 </html>
