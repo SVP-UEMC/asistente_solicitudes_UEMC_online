@@ -7,22 +7,13 @@
   <style>
     body {
       margin: 0;
-      background: #f4f6f9;
       font-family: Segoe UI, Arial;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      background: #f4f6f9;
     }
 
     .container {
       width: 100%;
-      max-width: 420px;
-      height: 700px;
-      background: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      overflow: hidden;
+      height: 100vh;
       display: flex;
       flex-direction: column;
     }
@@ -30,31 +21,23 @@
     .header {
       background: #003865;
       color: white;
-      padding: 14px;
-      text-align: center;
-      font-weight: bold;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
       font-size: 16px;
     }
 
-    .chat-wrapper {
-      position: relative;
-      flex: 1;
+    .header img {
+      height: 32px;
     }
 
     iframe {
       border: none;
       width: 100%;
       height: 100%;
-    }
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 50px;
-      background: white;
-      z-index: 10;
+      flex: 1;
     }
   </style>
 </head>
@@ -63,14 +46,11 @@
 
 <div class="container">
   <div class="header">
-    Asistente de solicitudes UEMC
+    <img src="logo-uemc.png" alt="Logo UEMC">
+    <span>Asistente de solicitudes</span>
   </div>
 
-  <div class="chat-wrapper">
-    <div class="overlay"></div>
-
-    <iframe src="https://copilotstudio.microsoft.com/environments/Default-df8b4aa6-8ab3-4a84-a045-f6a962ff2ed3/bots/cra1b_AsistenteTramitacinSolicitudesUEMC/webchat?__version__=2"></iframe>
-  </div>
+  https://copilotstudio.microsoft.com/environments/Default-df8b4aa6-8ab3-4a84-a045-f6a962ff2ed3/bots/cra1b_AsistenteTramitacinSolicitudesUEMC/webchat?__version__=2
 </div>
 
 </body>
