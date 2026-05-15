@@ -1,6 +1,6 @@
 # Chat Tramitación Solicitudes UEMC
 
-Aplicación web que integra el agente conversacional de **Tramitación de Solicitudes UEMC**, desarrollado en Copilot Studio y publicado como canal web mediante GitHub Pages.
+Aplicación web que integra el agente tipo chatbot guiado **Tramitación de Solicitudes UEMC**, desarrollado en Copilot Studio y publicado como canal web mediante GitHub Pages.
 
 La aplicación proporciona una interfaz web propia, replicando la experiencia visual del asistente guiado por opciones, mientras mantiene un comportamiento conversacional basado en normativa universitaria.
 
